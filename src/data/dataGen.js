@@ -8,12 +8,12 @@ const States = require('./States.original.json');
 const Townships = require('./Townships.original.json');
 const Types = require('./Types.original.json');
 
-const NRCStates = States.map(state => ({
+const NRCStates = States.map((state) => ({
   id: newId(),
   code: state.stateCode,
   number: {
     en: state.statePrefix_EN,
-    mm: state.statePrefix_EN,
+    mm: state.statePrefix_MM,
   },
   name: {
     en: state.stateName_EN,
@@ -21,7 +21,7 @@ const NRCStates = States.map(state => ({
   },
 }));
 
-const NRCTownships = Townships.map(township => ({
+const NRCTownships = Townships.map((township) => ({
   id: newId(),
   code: township.townShipCode,
   short: {
@@ -32,11 +32,11 @@ const NRCTownships = Townships.map(township => ({
     en: township.townShip_EN,
     mm: township.townShip_MM,
   },
-  stateId: NRCStates.find(state => state.number.en === township.stateID)?.id,
+  stateId: NRCStates.find((state) => state.number.en === township.stateID)?.id,
   stateCode: township.stateID,
 })).sort((a, b) => Number(a.stateCode) - Number(b.stateCode));
 
-const NRCTypes = Types.map(type => ({
+const NRCTypes = Types.map((type) => ({
   id: newId(),
   name: {
     en: type.en,
