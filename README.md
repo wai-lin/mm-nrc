@@ -8,6 +8,10 @@ npm install mm-nrc
 yarn add mm-nrc
 ```
 
+### Example
+
+[![Edit mm-nrc_example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/mm-nrc-example-kx4wl?fontsize=14&hidenavigation=1&theme=dark&view=editor)
+
 ### Documentation
 
 ##### Functions
