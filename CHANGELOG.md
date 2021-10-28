@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/wai-lin/mm-nrc/compare/v0.1.2...v0.1.3) (2021-10-28)
+
+
+### Bug Fixes
+
+* **type:** types not suggesting in js files ([7a9e778](https://github.com/wai-lin/mm-nrc/commit/7a9e7787521ba5a4b2da2734b49d766c0b99d76f))
+
 ### [0.1.2](https://github.com/wai-lin/mm-nrc/compare/v0.1.1...v0.1.2) (2021-10-26)
 
 ### [0.1.1](https://github.com/wai-lin/mm-nrc/compare/v0.1.0...v0.1.1) (2021-10-26)
