@@ -14,6 +14,42 @@ yarn add mm-nrc
 
 ### Documentation
 
+#### ! Important
+
+There are two `OUKAMA` data in this json data. You can filter out the one you need when getting the township values. Otherwise there will be two `OUKAMA` in your application.
+
+```json
+{
+  "id": "KZFQuHHRo7fanPlq",
+  "code": "SHWEPAUKKAN",
+  "short": {
+    "en": "OUKAMA",
+    "mm": "ဥကမ"
+  },
+  "name": {
+    "en": "SHWE PAUK KAN",
+    "mm": "ရွှေပေါက်ကံ"
+  },
+  "stateId": "Zvxm3m8cAwCeDgz1",
+  "stateCode": "12"
+}
+
+{
+  "id": "oAIpEryyl6pOobUS",
+  "code": "NORTHOKKALAPA",
+  "short": {
+    "en": "OUKAMA",
+    "mm": "ဥကမ"
+  },
+  "name": {
+    "en": "NORTH OKKALAPA",
+    "mm": "မြောက်ဥက္ကလာ"
+  },
+  "stateId": "Zvxm3m8cAwCeDgz1",
+  "stateCode": "12"
+}
+```
+
 ##### Functions
 
 ```ts
