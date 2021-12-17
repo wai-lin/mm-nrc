@@ -16,6 +16,17 @@ yarn add mm-nrc
 
 #### ! Important
 
+States has `NAY PYI TAW` as `9*` which is not needed in NRC. You may use it as you needed.
+
+```json
+{
+  "id": "sH0ybsmxNuxmeOT_",
+  "code": "NAYPYITAW",
+  "number": { "en": "9*", "mm": "၉*" },
+  "name": { "en": "NAYPYITAW", "mm": "နေပြည်တော်" }
+}
+```
+
 There are two `OUKAMA` data in this json data. You can filter out the one you need when getting the township values. Otherwise there will be two `OUKAMA` in your application.
 
 ```json

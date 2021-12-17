@@ -4,6 +4,8 @@ const nanoid = require('nanoid');
 
 const newId = () => nanoid.nanoid(16);
 
+// console.log(newId());
+
 const States = require('./States.original.json');
 const Townships = require('./Townships.original.json');
 const Types = require('./Types.original.json');
