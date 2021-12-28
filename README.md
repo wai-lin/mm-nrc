@@ -1,4 +1,4 @@
-# Myanmar National Registration Card JSON Data
+# Myanmar National Registration Card JSON Data and Utils Helpers
 
 ### Installation
 
@@ -132,3 +132,53 @@ type NrcType = {
   };
 };
 ```
+
+#### Helpers
+
+````ts
+/**
+ * convert english nrc to myanmar nrc
+ *
+ * ```js
+ * const mmNrc = convertToMmNrc('12/TAMANA(N)112233')
+ * console.log(mmNrc) // ၁၂/တမန(နိုင်)112233
+ * ```
+ */
+function convertToMmNrc(engNrc: string): string;
+
+/**
+ * convert myanmar nrc to english nrc
+ *
+ * ```js
+ * const mmNrc = convertToEnNrc('၁၂/တမန(နိုင်)112233')
+ * console.log(mmNrc) // 12/TAMANA(N)112233
+ * ```
+ */
+function convertToEnNrc(mmNrc: string): string;
+
+/** regex to check if the Nrc is correct pattern */
+const pattern = {
+  en: /\d{1,2}\/[A-Z]{6,6}\((N|E|P|T|R|S)\)\d{5,6}/,
+  mm: /[၀-၉]{1,2}\/[က-အ]{3,3}\((နိုင်|ဧည့်|ပြု|သာသနာ|ယာယီ|စ)\)([၀-၉]{5,6}|[0-9]{5,6})/,
+};
+
+/**
+ * destructure the provided nrc string
+ *
+ * ```js
+ * const { nrcNumber, nrcType, stateNo, townshipCode } = splitNrc('12/TAMANA(N)112233')
+ * console.log({
+ *  nrcNumber, // 112233
+ *  nrcType, // N
+ *  stateNo, // 12
+ *  townshipCode, // TAMANA
+ * })
+ * ```
+ */
+function splitNrc(nrc: string): {
+  stateNo: string;
+  townshipCode: string;
+  nrcType: string;
+  nrcNumber: string;
+};
+````
