@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/wai-lin/mm-nrc/compare/v0.2.0...v0.2.1) (2021-12-28)
+
+
+### Features
+
+* **helpers:** new helpers functions ([33355b7](https://github.com/wai-lin/mm-nrc/commit/33355b70c73608adcda82d9d77955b2092d69c8e))
+
 ## [0.2.0](https://github.com/wai-lin/mm-nrc/compare/v0.1.4...v0.2.0) (2021-12-17)
 
 
