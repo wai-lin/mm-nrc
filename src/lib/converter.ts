@@ -1,6 +1,6 @@
-import { pattern } from './pattern';
-import { splitNrc } from './splitter';
-import { getNrcStates, getNrcTownshipsByStateId, getNrcTypes } from './nrc';
+import { pattern } from "./pattern";
+import { splitNrc } from "./splitter";
+import { getNrcStates, getNrcTownshipsByStateId, getNrcTypes } from "./nrc";
 
 const nrcStates = getNrcStates();
 const nrcTypes = getNrcTypes();
@@ -14,7 +14,7 @@ const nrcTypes = getNrcTypes();
  * ```
  */
 export function convertToMmNrc(engNrc: string) {
-  if (!pattern.en.test(engNrc)) throw new Error('Invalid english NRC format.');
+  if (!pattern.en.test(engNrc)) throw new Error("Invalid english NRC format.");
 
   const { nrcNumber, nrcType, stateNo, townshipCode } = splitNrc(engNrc);
 
@@ -22,7 +22,7 @@ export function convertToMmNrc(engNrc: string) {
 
   const stateMm = state ? state.number.mm : stateNo;
   const townshipMm =
-    getNrcTownshipsByStateId(state?.id || '').find(
+    getNrcTownshipsByStateId(state?.id || "").find(
       (nTownship) => nTownship.short.en === townshipCode
     )?.short.mm || townshipCode;
   const typeMm =
@@ -40,7 +40,7 @@ export function convertToMmNrc(engNrc: string) {
  * ```
  */
 export function convertToEnNrc(mmNrc: string) {
-  if (!pattern.mm.test(mmNrc)) throw new Error('Invalid myanmar NRC format.');
+  if (!pattern.mm.test(mmNrc)) throw new Error("Invalid myanmar NRC format.");
 
   const { nrcNumber, nrcType, stateNo, townshipCode } = splitNrc(mmNrc);
 
@@ -48,7 +48,7 @@ export function convertToEnNrc(mmNrc: string) {
 
   const stateEn = state ? state.number.en : stateNo;
   const townshipEn =
-    getNrcTownshipsByStateId(state?.id || '').find(
+    getNrcTownshipsByStateId(state?.id || "").find(
       (nTownship) => nTownship.short.mm === townshipCode
     )?.short.en || townshipCode;
   const typeEn =

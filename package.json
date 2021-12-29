@@ -4,62 +4,53 @@
     "type": "git",
     "url": "https://github.com/wai-lin/mm-nrc"
   },
-  "version": "0.2.2",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
   "files": [
-    "dist",
+    "src",
+    "dist"
+  ],
+  "workspaces": [
+    "examples",
     "src"
   ],
-  "engines": {
-    "node": ">=10"
-  },
+  "main": "dist/mm-nrc.umd.js",
+  "module": "dist/mm-nrc.es.js",
+  "typings": "dist/types/index.d.ts",
+  "name": "mm-nrc",
+  "version": "0.2.2",
   "scripts": {
-    "start": "dts watch",
-    "build": "dts build",
-    "test": "dts test",
-    "lint": "dts lint",
-    "prepare": "dts build",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
+    "build": "npx turbo run build",
     "commit": "git add -A && cz"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "dts lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "name": "mm-nrc",
   "author": "wai-lin",
-  "module": "dist/mm-nrc.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/mm-nrc.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/mm-nrc.esm.js",
-      "limit": "10 KB"
-    }
-  ],
+  "license": "MIT",
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^6.0.3",
-    "@tsconfig/recommended": "^1.0.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "dts-cli": "^0.19.4",
-    "husky": "^7.0.4",
-    "size-limit": "^6.0.3",
     "standard-version": "^9.3.2",
-    "tslib": "^2.3.1",
-    "typescript": "^4.4.4"
+    "turbo": "^1.0.23"
+  },
+  "turbo": {
+    "baseBranch": "origin/main",
+    "pipeline": {
+      "build": {
+        "cache": false,
+        "dependsOn": [
+          "^build"
+        ]
+      },
+      "test": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": []
+      },
+      "lint": {
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      }
+    }
   },
   "config": {
     "commitizen": {

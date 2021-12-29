@@ -13,9 +13,9 @@
  */
 export function splitNrc(nrc: string) {
   const [stateNo, townshipCode, nrcType, nrcNumber] = nrc
-    .replace('/', ',')
-    .replace('(', ',')
-    .replace(')', ',')
-    .split(',');
+    .replace("/", ",")
+    .replace("(", ",")
+    .replace(")", ",")
+    .split(",");
   return { stateNo, townshipCode, nrcType, nrcNumber };
 }

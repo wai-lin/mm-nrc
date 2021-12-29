@@ -1,9 +1,7 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "module": "esnext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true
-  },
-  "include": ["src", "types"]
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "emitDeclarationOnly": true
+  }
 }

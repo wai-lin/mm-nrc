@@ -1,0 +1,14 @@
+{
+  "name": "src",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "gen:types": "tsc --resolveJsonModule --declaration --emitDeclarationOnly --declarationDir ../dist/types --esModuleInterop",
+    "build": "tsc && vite build && npm run gen:types",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2"
+  }
+}
