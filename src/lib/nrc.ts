@@ -1,4 +1,4 @@
-import NRCData from "../assets/NRC_Data.json";
+import NRCData from "../assets/NRC_Data.min.json";
 
 export type NrcState = {
   id: string;
