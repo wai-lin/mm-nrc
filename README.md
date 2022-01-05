@@ -25,6 +25,8 @@ States has `NAY PYI TAW` as `9*` which is not needed in NRC. You may use it as y
 }
 ```
 
+When using the library as NRC input, you also need to include NayPyiTaw townships as Mandalay townships.
+
 There are two `OUKAMA` data in this json data. You can filter out the one you need when getting the township values. Otherwise there will be two `OUKAMA` in your application.
 
 ```json
