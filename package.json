@@ -16,7 +16,7 @@
   "module": "dist/mm-nrc.es.js",
   "typings": "dist/types/index.d.ts",
   "name": "mm-nrc",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "scripts": {
     "build": "npx turbo run build",
     "commit": "git add -A && cz"

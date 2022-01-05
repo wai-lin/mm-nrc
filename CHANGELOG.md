@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.4](https://github.com/wai-lin/mm-nrc/compare/v0.2.3...v0.2.4) (2022-01-05)
+
+
+### Features
+
+* **npt-townships:** added nay pyi taw townships data ([28cd50b](https://github.com/wai-lin/mm-nrc/commit/28cd50b6581ef4acab56e1d1d87f0cd26ef30cf4))
+
 ### [0.2.3](https://github.com/wai-lin/mm-nrc/compare/v0.2.2...v0.2.3) (2021-12-30)
 
 ### [0.2.2](https://github.com/wai-lin/mm-nrc/compare/v0.2.1...v0.2.2) (2021-12-29)
